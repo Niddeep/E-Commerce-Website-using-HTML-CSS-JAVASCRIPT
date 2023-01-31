@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce | Services</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="index.html"><img src="2.jpg" width="150px">
+        </div>
+        <div class="nav_side">
+            <a href="about.html">About Us</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contacts</a>
+            <a href="">Login/Register</a>
+        </div>
+    </nav>
+    <div class="product" style="padding-top: 150px;">
+        <h2>OUR PRODUCTS</h2>
+        <div class="product_container" style="padding-bottom: 50px;">
+            <div class="item">
+                <div class="item_img">
+                    <img src="3.jpg">
+                </div>
+                <div class="item_content">
+                    <h3>Sofa</h3>
+                    <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                    <a href="">Buy Now</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_img">
+                    <img src="4.jpg">
+                </div>
+                <div class="item_content">
+                    <h3>Mattress</h3>
+                    <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                    <a href="">Buy Now</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_img">
+                    <img src="5.jpg">
+                </div>
+                <div class="item_content">
+                    <h3>Wooden Chairs</h3>
+                    <p>Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir</p>
+                    <a href="">Buy Now</a>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="feed">
+        <h2>Write a review</h2>
+        <div class="feed_form">
+            <form name="submit-googlesheet" method="post">
+            <input type="text" name="Name" placeholder="Name"><br>
+            <input type="email" name="Email" placeholder="Email ID"><br>
+            <input type="number" name="Number" placeholder="Contact Number"><br>
+            <textarea rows="5" cols="7" name="Review" placeholder="Write your review"></textarea><br>
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="2.jpg" width="150px">
+        </div>
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="about.html">About Us</a>|
+            <a href="service.html">Services</a>|
+            <a href="">Login</a>|
+            <a href="">Sign Up</a>
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="">Privacy Policy</a>|
+            <a href="">Terms of Use</a>|
+            <a href="">Refund Policy</a>
+        </div>
+        <div class="social">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/niddeepjdas.bicky" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/niddeep-jyoti-das-80316b236/?originalSubdomain=in" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/niddeepjdas/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/niddeep_das" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="tell: +917002377430"><i class="fa fa-phone-square" aria-hidden="true"></i></a>
+            <a href="mailto: bikcydas557@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+        <hr>
+        <p>Copyright &copy; 2022 NJD FURNITURES. All rights reserved</p>
+    </footer>
+    <script type="text/javascript">
+        const scriptURL ='https://script.google.com/macros/s/AKfycby8pogBBKDbBrYrqQtOcZq5MYu7t7pcogj2xea_u5ug41w70MRjj8Vn5F9kDBejinqg/exec'
+            const form = document.forms['submit-googlesheet']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => alert("Thank you for your review.."))
+                    .catch(error => console.error('Error!', error.message))
+             })
+
+    </script>
+  </script>
+</body>
+</html> 
